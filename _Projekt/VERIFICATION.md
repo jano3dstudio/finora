@@ -26,3 +26,5 @@ Lokale Ablage ist keine Veröffentlichung. Kein Remote-Repository und keine Webs
 `Rendering Finish.exe.kit-lock.json` im App-Einstieg: gehashter Build- und Kit-Stand.
 
 Reproduzieren: DEVELOPMENT.md. Vor jeder neuen Testserie frischen Testordner verwenden.
+
+Quellpaket separat im Arbeitsbereich entpackt und ohne Zugriff auf das produktive Kit erfolgreich neu gebaut (53 Dateien mit SHA256-Manifest). Kanonische Projektkarte, Toolbox-Katalog und Kit-Anbindung geprüft.
