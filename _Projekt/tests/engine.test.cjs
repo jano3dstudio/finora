@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),E=require('../ui/engine.js');
+const cube=['TITLE "identity"','LUT_3D_SIZE 2'];for(let b=0;b<2;b++)for(let g=0;g<2;g++)for(let r=0;r<2;r++)cube.push(`${r} ${g} ${b}`);
+const lut=E.parseCube(cube.join('\n'));const result=E.lutAt(.27,.51,.83,lut);result.forEach((v,i)=>assert.ok(Math.abs(v-[.27,.51,.83][i])<1e-8));
+assert.throws(()=>E.parseCube('LUT_3D_SIZE 2\n0 0 0'));assert.throws(()=>E.parseCube('LUT_1D_SIZE 2\n0 0 0'));
+const px=new Uint8ClampedArray([25,80,200,0,110,100,99,128,255,255,255,255]),original=px.slice();E.transform(px,E.defaults());assert.deepEqual(px,original);
+E.transform(px,{...E.defaults(),exposure:1});assert.equal(px[0],50);assert.equal(px[3],0);assert.equal(px[7],128);
+const neutral=original.slice();E.transform(neutral,{...E.defaults(),look:'custom',intensity:100},0,lut);assert.deepEqual(neutral,original);
+const transparent=new Uint8ClampedArray([255,255,255,0]);assert.equal(E.analyze(transparent),0);
+assert.ok(E.analyze(new Uint8ClampedArray([30,30,30,255]))>0);assert.ok(E.analyze(new Uint8ClampedArray([220,220,220,255]))<0);
+assert.equal(E.filename('Bild.png','Kunde',0,'jpg'),'Kunde_01_Bild_finish.jpg');assert.ok(!E.filename('../bad<>.png','',0,'png').includes('/'));
+const fs=require('node:fs'),vm=require('node:vm'),ctx={window:{}};vm.runInNewContext(fs.readFileSync(require('node:path').join(__dirname,'../ui/locales.js'),'utf8'),ctx);assert.deepEqual(Object.keys(ctx.window.FinishText.de).sort(),Object.keys(ctx.window.FinishText.en).sort());
+console.log('PASS LUT ordering/interpolation/validation, neutral identity, exposure, alpha, auto direction, filename safety, DE/EN parity');

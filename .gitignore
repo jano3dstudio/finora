@@ -1,0 +1,14 @@
+*.exe
+*.exe.kit-lock.json
+compiler-input.txt
+_Pakete/
+_Projekt/tests/output/
+_Projekt/review/
+_Projekt/delivery.json
+_Projekt/docs/registration-backups/
+__pycache__/
+*.pyc
+profile/
+runtime/
+node_modules/
+*.tmp
