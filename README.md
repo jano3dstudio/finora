@@ -1,6 +1,6 @@
-# Rendering Finish · 0.1.0
+# FINORA
 
-Lokale Windows-App für das Finish von JPG-/PNG-Rendering-Serien. Arbeitsname, kein öffentlich eingeführter Produktname.
+Lokale Windows-App für das Finish von JPG-/PNG-Rendering-Serien. Beschreibender Arbeitstitel; öffentlich verfügbarer Pilot, keine Markenfreigabe behauptet.
 
 **Start:** `Rendering Finish.exe` in diesem Ordner. Benötigt Windows x64 mit Microsoft Edge WebView2 Runtime. Keine Anmeldung, kein Abo und kein Bild-Upload.
 
@@ -32,4 +32,20 @@ App-Kit 0.2.0, Module `window`, `web`, `looks`, `mouse-qa`; konkrete Quellrevisi
 
 Quellen: [_Projekt](./_Projekt/) · [Entwicklung](./DEVELOPMENT.md) · [Prüfbericht](_Projekt/VERIFICATION.md) · [Projektkarte](./PROJECT_MAP.json).
 
-Technisch geprüft mit synthetischen Testbildern. Jonas Praxistest mit echten Renderings sowie seine gestalterische Freigabe stehen aus. Kein Remote-Upload, keine Veröffentlichung.
+Technisch geprüft mit synthetischen Testbildern. Jonas Praxistest mit echten Renderings sowie seine gestalterische Freigabe stehen aus. Landingpage, Windows-Download und Media Kit am 22.09.2026 veröffentlicht und per HTTPS geprüft.
+
+
+## Website und Media Kit
+
+[Produktseite](https://tools.jano3dstudio.de/rendering-finish/) · [Windows-Download](https://tools.jano3dstudio.de/rendering-finish/downloads/Rendering-Finish-0.1.0-Windows.zip) · [Media Kit](https://tools.jano3dstudio.de/rendering-finish/downloads/Rendering-Finish-0.1.0-Media-Kit.zip).
+
+Webquellen, Media Kit und fertiges Website-Paket: `../../JS_Web/jano-tools-web/`. Integration: Tools-Startseite, jonaschlegelmilch.de Portfolio/Menü und /overview/. Öffentliches Windows-ZIP enthält nur EXE, Startanleitung und Lizenz; das lokale Quellpaket bleibt getrennt.
+
+Produktname seit 23.09.2026: **FINORA**. Technische Ordner, Speicherkennungen und bestehende Startpfade bleiben kompatibel.
+
+
+## GitHub-Ablage
+
+FINORA – Lokale Stapelbearbeitung und Ausgabe von Renderings und Bildern.
+
+Repository: `jano3dstudio/finora` (privat). Quellen, Build-Anleitung und Projektregeln werden versioniert. Persönliche Laufzeitdaten, Zugangsdaten und lokale Sicherungen gehören nicht in Git. Bestehende lokale Start- und Quellpfade bleiben erhalten. Der Upload ist eine Quellcodesicherung; technische Prüfstände und persönliche Freigabe stehen separat in der Projektdokumentation.

@@ -1,1 +1,53 @@
-{"schema":1,"id":"rendering-finish","name":"Rendering Finish","appRootFromMap":".","source":"_Projekt","repository":".","build":"_Projekt/build.ps1","rules":"AGENTS.md","verification":"_Projekt/VERIFICATION.md","launch":"Rendering Finish.exe","launchKind":"file","modulePlan":"_Projekt/app-kit.plan.json","packages":["_Pakete"],"testAndScriptFolders":["_Projekt/tests"],"pathPolicy":"Canonical app in JS_GitHub/rendering-finish; staging is not the active source.","gitPolicy":"Source, SDK references and docs only. No private profiles, customer images, binaries or generated test outputs.","development":{"guide":"DEVELOPMENT.md","requiredPaths":["_Projekt/deps/Microsoft.Web.WebView2.Core.dll","_Projekt/deps/Microsoft.Web.WebView2.WinForms.dll","_Projekt/deps/WebView2Loader.dll","_Projekt/deps/LICENSE.txt"],"buildAndTestCommands":["node"],"frameworkCompiler":true,"manualChecks":["WebView2 Runtime and GUI checks per DEVELOPMENT.md","Personal review and additional Windows DPI pending"]}}
+{
+  "schema": 1,
+  "id": "rendering-finish",
+  "name": "FINORA",
+  "appRootFromMap": ".",
+  "source": "_Projekt",
+  "repository": ".",
+  "build": "_Projekt/build.ps1",
+  "rules": "AGENTS.md",
+  "verification": "_Projekt/VERIFICATION.md",
+  "launch": "FINORA.exe",
+  "launchKind": "file",
+  "modulePlan": "_Projekt/app-kit.plan.json",
+  "packages": [
+    "_Pakete"
+  ],
+  "testAndScriptFolders": [
+    "_Projekt/tests"
+  ],
+  "pathPolicy": "Canonical app in JS_GitHub/rendering-finish; staging is not the active source.",
+  "gitPolicy": "Source, SDK references and docs only. No private profiles, customer images, binaries or generated test outputs.",
+  "development": {
+    "guide": "DEVELOPMENT.md",
+    "requiredPaths": [
+      "_Projekt/deps/Microsoft.Web.WebView2.Core.dll",
+      "_Projekt/deps/Microsoft.Web.WebView2.WinForms.dll",
+      "_Projekt/deps/WebView2Loader.dll",
+      "_Projekt/deps/LICENSE.txt"
+    ],
+    "buildAndTestCommands": [
+      "node"
+    ],
+    "frameworkCompiler": true,
+    "manualChecks": [
+      "WebView2 Runtime and GUI checks per DEVELOPMENT.md",
+      "Personal review and additional Windows DPI pending"
+    ]
+  },
+  "icon": {
+    "source": "_Projekt/ui/icon.svg",
+    "exports": [
+      "_Projekt/ui/icon.png",
+      "_Projekt/icon.ico"
+    ],
+    "policy": "../jano-app-kit/APP_ICONS.md"
+  },
+  "website": {
+    "url": "https://tools.jano3dstudio.de/rendering-finish/",
+    "source": "../../JS_Web/jano-tools-web",
+    "mediaKit": "https://tools.jano3dstudio.de/rendering-finish/downloads/Rendering-Finish-0.1.0-Media-Kit.zip",
+    "verification": "../../JS_Web/jano-tools-web/review/rendering-finish/https-verification.json"
+  }
+}

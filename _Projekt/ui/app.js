@@ -87,6 +87,6 @@ window.FinishQA={async run(){
  const composed=await render(images[0],0),lp=composed.hit.logo;const pixel=composed.c.getContext('2d').getImageData(Math.round(lp.x+lp.w*.12),Math.round(lp.y+lp.h*.2),1,1).data;assert(pixel[0]>245&&pixel[1]>245&&pixel[2]>245,'logo not tinted');
  // Custom LUT remains embedded in a saved template, including after readback.
  const cube=['LUT_3D_SIZE 2'];for(let b=0;b<2;b++)for(let g=0;g<2;g++)for(let r=0;r<2;r++)cube.push(`${r} ${g} ${b}`);lut=E.parseCube(cube.join('\n'));lutName='identity.cube';change('look','custom');$('templateName').value='QA LUT';await saveTemplate();const lutTemplate=(await store('getAll')).find(v=>v.name==='QA LUT');assert(lutTemplate.lut.data.length===24,'LUT template data');await loadTemplate(rows[0]);
- renderList();await preview();window.__qaResult={ok:true,images:images.length,exported:result.count,templates:2,cancellation:true,resize:true,collision:true,logoUntinted:true};return window.__qaResult;
+ renderList();await preview();status('ready');window.__qaResult={ok:true,images:images.length,exported:result.count,templates:2,cancellation:true,resize:true,collision:true,logoUntinted:true};return window.__qaResult;
 },state:()=>({images:images.length,brand:clone(brand),settings:clone(global),busy,lang}),render,templates:()=>store('getAll')};
 })();

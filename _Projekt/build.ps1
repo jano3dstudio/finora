@@ -3,7 +3,7 @@ $ErrorActionPreference='Stop'
 if(-not $KitRoot){$ref=Get-Content -LiteralPath (Join-Path $PSScriptRoot 'kit.ref.json') -Raw | ConvertFrom-Json;$KitRoot=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot $ref.source))}
 . (Join-Path $KitRoot 'scripts/consumer.ps1')
 $kit=Get-JanoKitPlan -ProjectRoot $PSScriptRoot -KitRoot $KitRoot
-if(-not $OutputPath){$OutputPath=Join-Path (Split-Path $PSScriptRoot) 'Rendering Finish.exe'}
+if(-not $OutputPath){$OutputPath=Join-Path (Split-Path $PSScriptRoot) 'FINORA.exe'}
 $OutputPath=[IO.Path]::GetFullPath($OutputPath)
 New-Item -ItemType Directory -Force -Path (Split-Path $OutputPath) | Out-Null
 $compiler=Join-Path $env:WINDIR 'Microsoft.NET\Framework64\v4.0.30319\csc.exe'
