@@ -1,3 +1,15 @@
+<!-- distribution-entry-20260924 -->
+# FINORA
+
+Lokale Stapelbearbeitung und Ausgabe von Renderings und Bildern.
+
+[Website](https://tools.jano3dstudio.de/rendering-finish/) · [Repository](https://github.com/jano3dstudio/finora) · [Build und Download](DISTRIBUTION.md) · [Entwicklung](DEVELOPMENT.md)
+
+Persoenliches Testprojekt / Prototyp von Jona Fynn Schlegelmilch. Idee, gestalterische Richtung und Optimierung von Jona; KI hat bei Umsetzung und Iterationen unterstuetzt. Kein zugesicherter produktiver Einsatz. Vor wichtigen Arbeiten eigene Sicherungen anlegen.
+
+**Ablage:** Quellen und Anleitungen im Repository; ausfuehrbare Pakete als separate Release-Dateien. Repository bleibt privat. Oeffentliche Freigabe und Lizenzstatus: [PUBLICATION_REVIEW.md](PUBLICATION_REVIEW.md).
+<!-- /distribution-entry-20260924 -->
+
 # FINORA
 
 Lokale Windows-App für das Finish von JPG-/PNG-Rendering-Serien. Beschreibender Arbeitstitel; öffentlich verfügbarer Pilot, keine Markenfreigabe behauptet.
